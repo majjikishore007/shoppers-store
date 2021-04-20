@@ -18,8 +18,6 @@ const Card = ({
   const cardPrice = product ? product.price : 'default';
 
   const additemToCart = () => {
-    //TODO:
-
     addItemToCart(product, () => setredirect(true));
   };
 
