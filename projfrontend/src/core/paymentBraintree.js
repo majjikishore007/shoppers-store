@@ -14,6 +14,7 @@ const PaymentB = ({ products, setreload = (f) => f, reload = undefined }) => {
     error: '',
     instance: {},
   });
+  const [isSuccess, setisSuccess] = useState(false);
   const userId = isAuthenticated() && isAuthenticated().user._id;
   const token = isAuthenticated() && isAuthenticated().token;
 
@@ -32,6 +33,7 @@ const PaymentB = ({ products, setreload = (f) => f, reload = undefined }) => {
       processPayment(userId, token, paymentData)
         .then((response) => {
           setinfo({ ...info, success: response.success });
+          setisSuccess(true);
           console.log('PAYMENT SUCCESS');
           const orderData = {
             products: products,
@@ -81,15 +83,35 @@ const PaymentB = ({ products, setreload = (f) => f, reload = undefined }) => {
             <button onClick={onPurchase}>Buy</button>
           </div>
         ) : (
-          <h3>Please login or add products</h3>
+          <div className="alert alert-danger mt-3">
+            <h4> carty is empty </h4>
+          </div>
         )}
+      </div>
+    );
+  };
+  const successMessage = () => {
+    return (
+      <div
+        className="alert alert-success mt-3"
+        style={{ display: isSuccess ? '' : 'none' }}
+      >
+        <h4> purchage done successfully </h4>
       </div>
     );
   };
   return (
     <div>
-      <h3>Total purchage Amount : {getAmount()}$</h3>
+      {console.log('IS AUTH', token)}
+      {token ? (
+        <h3>Total purchage Amount : {getAmount()}$</h3>
+      ) : (
+        <div className="alert alert-danger mt-3">
+          <h4> please signin </h4>
+        </div>
+      )}
       {showbtDropdown()}
+      {successMessage()}
     </div>
   );
 };

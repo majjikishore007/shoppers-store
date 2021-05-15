@@ -17,3 +17,20 @@ export const createOrder = (userId, token, orderData) => {
       console.log(err);
     });
 };
+export const getAllOrders = (userId, token) => {
+  return fetch(`${API}/order/all/${userId}`, {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'content-type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => {
+      console.log('RESPONSE AT 28' + response);
+      return response.json();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};

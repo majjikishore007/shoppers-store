@@ -44,6 +44,7 @@ exports.signin = (req, res) => {
       });
     }
     //creating token
+    console.log('SCREET AT LINE 48 AUTH ROUTE', process.env.SECRET);
     const token = jwt.sign({ _id: user._id }, process.env.SECRET);
     //put token in cookie
     res.cookie('token', token, { expire: new Date() + 999 });

@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Base title="Home page" description="welcome to the TshirtStote">
+    <Base title="ShoppersStop" description="The buyers shop">
       <div className="row text-center mb-4">
         <h1 className="text-white mb-4">A cool collection of Tshirts</h1>
         <div className="row">
