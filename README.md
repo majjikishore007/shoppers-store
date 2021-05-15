@@ -2,14 +2,14 @@
 
  <img src="img/Screenshot (70).png" class="avatar" >
 
-### An ecommerce website for selling T shirts
+### An e-commerce website for selling T-shirts
 
 ## Features
 
-- User authentations and browing different products and adding to cart for purchage
-- Admin authentation and dashboard for creating, deleting and updating products anb categories.
+- User authentication and browsing different products and adding to cart for purchase
+- Admin authentication and dashboard for creating, deleting and updating products and categories.
 
-- Payments integration for making an order and purchaging
+- Payments integration for making an order and purchasing
 
 ## Tech Stack
 
