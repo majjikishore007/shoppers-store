@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import { addItemToCart, removeItemFromCart } from './helper/Carthelper';
 import Imghelper from './helper/Imghelper';
-// import { isAuthenticated } from '../auth/helper/index';
+import { isAuthenticated } from '../auth/helper/index';
 
 const Card = ({
   product,
@@ -18,9 +18,21 @@ const Card = ({
   const cardPrice = product ? product.price : 'default';
 
   const additemToCart = () => {
-    addItemToCart(product, () => setredirect(true));
+    // console.log("TOKEN :",isAuthenticated().token);
+    if (isAuthenticated()) {
+       addItemToCart(product, () => setredirect(true));
+    }
+    else {
+      showPopup();
+    }
   };
-
+  const showPopup = () => {
+     return (
+        <div className="alert alert-danger mt-3">
+            <h4>Please signin</h4>
+          </div>  
+      )
+  }
   const getaRedirect = () => {
     if (redirect) {
       return <Redirect to="/cart" />;

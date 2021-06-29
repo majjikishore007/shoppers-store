@@ -6,6 +6,7 @@ export const getAllProducts = () => {
     method: 'GET',
   })
     .then((response) => {
+      console.log("RES: " + response.json);
       return response.json();
     })
     .catch((error) => {

@@ -28,7 +28,6 @@ app.use('/api', productRoutes);
 app.use('/api', orderRoutes);
 app.use('/api', stripeRoutes);
 app.use('/api', paymentBRoutes);
-
 //DB connection
 mongoose
   .connect(process.env.DATABASE, {
@@ -41,6 +40,6 @@ mongoose
   });
 
 //port  and starting a server
-app.listen(process.env.PORT, () => {
-  console.log(`tshirt  backend running on ${process.env.PORT} ...`);
+app.listen(8080, () => {
+  console.log(`tshirt  backend running on ${800} ...`);
 });
