@@ -40,6 +40,6 @@ mongoose
   });
 
 //port  and starting a server
-app.listen(8080, () => {
+app.listen(8000, () => {
   console.log(`tshirt  backend running on ${800} ...`);
 });
