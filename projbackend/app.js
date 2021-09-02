@@ -38,8 +38,8 @@ mongoose
   .then(() => {
     console.log('DB IS CONNECTED');
   });
-
+let PORT = process.env.PORT || 3000;
 //port  and starting a server
-app.listen(8000, () => {
-  console.log(`tshirt  backend running on ${800} ...`);
+app.listen(PORT, () => {
+  console.log(`tshirt  backend running on ${PORT} ...`);
 });
