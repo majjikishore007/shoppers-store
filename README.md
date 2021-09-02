@@ -35,10 +35,3 @@ Ensure to install
 2.  Setup the secrets in `.env ` file before running
 3.  Run `npm start` to start the server
 
-<img src="img/Screenshot (73).png" class="avatar" >
-<img src="img/Screenshot (74).png" class="avatar" >
-<img src="img/Screenshot (76).png" class="avatar" >
-<img src="img/Screenshot (77).png" class="avatar" >
-<img src="img/Screenshot (78).png" class="avatar" >
-<img src="img/Screenshot (79).png" class="avatar" >
-<img src="img/Screenshot (80).png" class="avatar" >
