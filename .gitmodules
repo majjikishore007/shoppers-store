@@ -1,3 +1,6 @@
 [submodule "shopppers-store-backend"]
 	path = shopppers-store-backend
 	url = git@github.com:majjikishore007/shopppers-store-backend.git
+[submodule "shoppers-stote-frontend"]
+	path = shoppers-stote-frontend
+	url = git@github.com:majjikishore007/shoppers-stote-frontend.git
