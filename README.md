@@ -1,13 +1,13 @@
 # TshirtStore
 <div align="center">
   <h3>
-    <a href="https://frontmkk.herokuapp.com/">
+    <a href="https://shoppersstore.vercel.app/">
       Demo
     </a>
   </h3>
 </div>
- <img src="img/Screenshot (70).png" class="avatar" >
-
+ <img src="img/Screenshot from 2022-03-14 17-07-48.png" class="avatar" >
+ <img src="img/Screenshot from 2022-03-14 17-08-01.png" class="avatar" >
 ### An e-commerce website for selling T-shirts
 
 ## Features
@@ -20,6 +20,7 @@
 ## Tech Stack
 
 - MongoDB, ExpressJs, ReactJs, NodeJS `MERN`
+- ChakraUI
 - Payments Gateway with Braintree
 
 ## Setup
